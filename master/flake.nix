@@ -1,5 +1,5 @@
 {
-  description = ''A Nim wrapper for librtlsdr'';
+  description = ''Nim wrapper around librtlsdr.'';
 
   inputs.flakeNimbleLib.owner = "riinr";
   inputs.flakeNimbleLib.ref   = "master";
@@ -7,19 +7,19 @@
   inputs.flakeNimbleLib.type  = "github";
   inputs.flakeNimbleLib.inputs.nixpkgs.follows = "nixpkgs";
   
-  inputs.src-nimrtlsdr-master.flake = false;
-  inputs.src-nimrtlsdr-master.ref   = "refs/heads/master";
-  inputs.src-nimrtlsdr-master.owner = "jpoirier";
-  inputs.src-nimrtlsdr-master.repo  = "nimrtlsdr";
-  inputs.src-nimrtlsdr-master.type  = "github";
+  inputs.src-rtlsdr-master.flake = false;
+  inputs.src-rtlsdr-master.ref   = "refs/heads/master";
+  inputs.src-rtlsdr-master.owner = "jpoirier";
+  inputs.src-rtlsdr-master.repo  = "nimrtlsdr";
+  inputs.src-rtlsdr-master.type  = "github";
   
   outputs = { self, nixpkgs, flakeNimbleLib, ...}@deps:
   let 
     lib  = flakeNimbleLib.lib;
-    args = ["self" "nixpkgs" "flakeNimbleLib" "src-nimrtlsdr-master"];
+    args = ["self" "nixpkgs" "flakeNimbleLib" "src-rtlsdr-master"];
   in lib.mkRefOutput {
     inherit self nixpkgs ;
-    src  = deps."src-nimrtlsdr-master";
+    src  = deps."src-rtlsdr-master";
     deps = builtins.removeAttrs deps args;
     meta = builtins.fromJSON (builtins.readFile ./meta.json);
   };

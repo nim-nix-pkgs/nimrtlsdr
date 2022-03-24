@@ -36,10 +36,10 @@
       "inputs": {
         "flakeNimbleLib": "flakeNimbleLib",
         "nixpkgs": "nixpkgs",
-        "src-nimrtlsdr-develop": "src-nimrtlsdr-develop"
+        "src-rtlsdr-develop": "src-rtlsdr-develop"
       }
     },
-    "src-nimrtlsdr-develop": {
+    "src-rtlsdr-develop": {
       "flake": false,
       "locked": {
         "lastModified": 1421253953,
