@@ -11,6 +11,7 @@
   inputs.src-rtlsdr-v0_1_1.ref   = "refs/tags/v0.1.1";
   inputs.src-rtlsdr-v0_1_1.owner = "jpoirier";
   inputs.src-rtlsdr-v0_1_1.repo  = "nimrtlsdr";
+  inputs.src-rtlsdr-v0_1_1.dir   = "";
   inputs.src-rtlsdr-v0_1_1.type  = "github";
   
   outputs = { self, nixpkgs, flakeNimbleLib, ...}@deps:
