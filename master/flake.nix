@@ -11,7 +11,6 @@
   inputs.src-rtlsdr-master.ref   = "refs/heads/master";
   inputs.src-rtlsdr-master.owner = "jpoirier";
   inputs.src-rtlsdr-master.repo  = "nimrtlsdr";
-  inputs.src-rtlsdr-master.dir   = "";
   inputs.src-rtlsdr-master.type  = "github";
   
   outputs = { self, nixpkgs, flakeNimbleLib, ...}@deps:
